@@ -1,14 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import {
-  BrowserRouter,
-  RouterProvider,
-  createBrowserRouter,
-} from "react-router-dom";
-import Root from "./routes/root";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Sidebar from "./components/sidebar/Sidebar";
 import TopCard from "./components/cards/topcard/TopCard";
 import Layout from "./layout/Layout";
