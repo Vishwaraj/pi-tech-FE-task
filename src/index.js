@@ -1,13 +1,37 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import {
+  BrowserRouter,
+  RouterProvider,
+  createBrowserRouter,
+} from "react-router-dom";
+import Root from "./routes/root";
+import Sidebar from "./components/sidebar/Sidebar";
+import TopCard from "./components/cards/topcard/TopCard";
+import Layout from "./layout/Layout";
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+  },
+  {
+    path: "/components",
+    element: <Sidebar />,
+  },
+  {
+    path: "/top-card",
+    element: <TopCard />,
+  },
+]);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
